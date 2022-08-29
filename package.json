@@ -1,0 +1,38 @@
+{
+  "name": "mynode",
+  "version": "1.0.0",
+  "description": "一个个人的node项目，用于实现 1. 建议的node服务 2. 接口 3. 连接数据库",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf coverage dist node_modules package-lock.json yarn.lock",
+    "deploy": "cross-env NODE_ENV=prod node --es-module-specifier-resolution=node src/index.js",
+    "start": "cross-env NODE_ENV=dev nodemon --es-module-specifier-resolution=node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dr294769070/myNode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dr294769070/myNode/issues"
+  },
+  "homepage": "https://github.com/Dr294769070/myNode#readme",
+  "dependencies": {
+    "@yangzw/bruce-us": "^1.0.4",
+    "cross-env": "^7.0.3",
+    "dayjs": "^1.11.5",
+    "koa": "^2.13.4",
+    "koa-body": "^5.0.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.1",
+    "koa-onerror": "^4.2.0",
+    "koa-router": "^12.0.0",
+    "mongoose": "^6.5.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
